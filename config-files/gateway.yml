@@ -24,6 +24,24 @@ zuul:
       url: http://localhost:8083
     fgn-pqrs:
       url: http://localhost:8084
+    user:
+      path: /user/**
+      url: http://localhost:9999/sso/user
+      
+spring:
+  oauth2:
+    sso:
+      home:
+        secure: false
+        path: /,/**/*.html
+    client:
+      accessTokenUri: http://localhost:9999/sso/oauth/token
+      userAuthorizationUri: http://localhost:9999/sso/oauth/authorize
+      clientId: fgn
+      clientSecret: Mimojal263
+    resource:
+      userInfoUri: http://localhost:9999/sso/user
+      
       
       
 ---
@@ -45,3 +63,6 @@ zuul:
       url: http://localhost:8083
     pqrs:
       url: http://localhost:8084
+    user:
+      path: /user/**
+      url: http://localhost:9999/sso/user

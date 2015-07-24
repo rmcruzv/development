@@ -7,4 +7,6 @@ security.sessions: NEVER
 
 #server.contextPath: /ui
 
-spring.redis.host: 192.168.59.103
+#spring.redis.host: 192.168.59.103
+
+spring.oauth2.resource.userInfoUri: http://localhost:9999/sso/user
