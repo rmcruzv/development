@@ -1,0 +1,50 @@
+#comando para arrancar el servidor redis docker run --rm -i -t -p 6379:6379 redis
+spring.redis.host: 192.168.59.103
+
+security:
+  sessions: ALWAYS
+      
+#perfil actual
+spring.profiles.active: DEVELOPMENT
+
+---
+spring.profiles: DEVELOPMENT
+
+fgn.loginUrl: http://localhost:8081/PortalFGN/ws-fgn/userByDoc
+  
+server:
+  port: 8082
+logging:
+  level:
+    org.springframework.security: WARN
+    org.springframework.beans: WARN
+    org.springframework: WARN
+    org.hibernate: WARN
+
+zuul:
+  routes:
+    ui:
+      url: http://localhost:8083
+    fgn-pqrs:
+      url: http://localhost:8084
+      
+      
+---
+spring.profiles: PRODUCTION 
+fgn.loginUrl: http://10.1.6.28:8080/PortalFGN/ws-fgn/userByDoc
+
+server:
+  port: 8082
+logging:
+  level:
+    org.springframework.security: ERROR
+    org.springframework.beans: ERROR
+    org.springframework: ERROR
+    org.hibernate: ERROR
+
+zuul:
+  routes:
+    ui:
+      url: http://localhost:8083
+    pqrs:
+      url: http://localhost:8084

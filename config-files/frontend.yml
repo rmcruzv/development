@@ -5,6 +5,6 @@ server:
   port: 8083
 security.sessions: NEVER
 
-#server.contextPath: /ui
+server.contextPath: /ui2
 
 spring.redis.host: 192.168.59.103
