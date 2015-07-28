@@ -54,7 +54,7 @@ spring.datasource.driverClassName: oracle.jdbc.driver.OracleDriver
 spring.jpa.generate-ddl: true
 #spring.jpa.hibernate.ddl-auto: create
 spring.jpa.properties.hibernate.hbm2ddl.import_files: init-data.sql
-spring.jpa.show-sql: true      
+spring.jpa.show-sql: true
 #Fin configuración de JPA
 
 ---
@@ -91,5 +91,5 @@ spring.datasource.driverClassName: oracle.jdbc.driver.OracleDriver
 spring.jpa.generate-ddl: true
 #spring.jpa.hibernate.ddl-auto: create
 spring.jpa.properties.hibernate.hbm2ddl.import_files: init-data.sql
-spring.jpa.show-sql: true      
+spring.jpa.show-sql: true
 #Fin configuración de JPA
