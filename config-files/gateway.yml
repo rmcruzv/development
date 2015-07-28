@@ -1,6 +1,6 @@
 #comando para arrancar el servidor redis: docker run --rm -i -t -p 6379:6379 redis
-spring.redis.host: 192.168.59.103
-#spring.redis.host: 192.168.0.9
+#spring.redis.host: 192.168.59.103
+spring.redis.host: 192.168.0.9
 
 security:
   sessions: ALWAYS
