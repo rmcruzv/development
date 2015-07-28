@@ -1,9 +1,10 @@
 logging:
   level:
     org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
 server:
   port: 8083
-security.sessions: NEVER
+#security.sessions: NEVER
 
 #server.contextPath: /ui
 
