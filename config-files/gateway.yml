@@ -1,6 +1,5 @@
-#comando para arrancar el servidor redis: docker run --rm -i -t -p 6379:6379 redis
-#spring.redis.host: 192.168.59.103
-spring.redis.host: 192.168.0.9
+#comando para arrancar el servidor redis docker run --rm -i -t -p 6379:6379 redis
+spring.redis.host: 192.168.59.103
 
 security:
   sessions: ALWAYS
@@ -44,21 +43,8 @@ zuul:
 #    resource:
 #      userInfoUri: http://localhost:9999/sso/user
       
-#configuración de JPA      
-#esto crea la base de datos con base en el mapeo de objetos
-spring:
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: SECURE_DOC
-    password: SECURE_DOC
-    driverClassName: oracle.jdbc.driver.OracleDriver
-  jpa:
-    generate-ddl: true
-    hibernate.ddl-auto: create
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: true
-#Fin configuración de JPA
-
+      
+      
 ---
 spring.profiles: PRODUCTION 
 fgn.loginUrl: http://10.1.6.28:8080/PortalFGN/ws-fgn/userByDoc
@@ -81,22 +67,3 @@ zuul:
     user:
       path: /user/**
       url: http://localhost:9999/sso/user
-      
-#configuración de JPA      
-spring:
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: SECURE_DOC
-    password: SECURE_DOC
-    driverClassName: oracle.jdbc.driver.OracleDriver
-
-#esto crea la base de datos con base en el mapeo de objetos
-  jpa:
-    generate-ddl: true
-#    hibernate.ddl-auto: create
-    properties:
-      hibernate:
-        hbm2ddl:
-          import_files: init-data.sql
-    show-sql: true
-#Fin configuración de JPA
