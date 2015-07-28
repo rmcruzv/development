@@ -1,66 +1,35 @@
-#comando para arrancar el servidor redis: docker run --rm -i -t -p 6379:6379 redis
-#spring.redis.host: 192.168.59.103
 spring.redis.host: 192.168.0.9
-
 security:
   sessions: ALWAYS
-
----
 spring.profiles: DEVELOPMENT
-
 fgn.loginUrl: http://localhost:8081/PortalFGN/ws-fgn/userByDoc
-  
 server:
   port: 8082
 logging:
   level:
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
-#    org.springframework.beans: DEBUG
-#    org.springframework: DEBUG
-#    org.hibernate: DEBUG
-
 zuul:
   routes:
     ui:
       url: http://localhost:8083
     fgn-pqrs:
       url: http://localhost:8084
-#    user:
-#      path: /user/**
-#      url: http://localhost:9999/sso/user
-      
-#spring:
-#  oauth2:
-#    sso:
-#      home:
-#        secure: false
-#        path: /,/**/*.html
-#    client:
-#      accessTokenUri: http://localhost:9999/sso/oauth/token
-#      userAuthorizationUri: http://localhost:9999/sso/oauth/authorize
-#      clientId: fgn
-#      clientSecret: Mimojal263
-#    resource:
-#      userInfoUri: http://localhost:9999/sso/user
-      
-#configuración de JPA      
-spring.datasource.url: jdbc:oracle:thin:@localhost:1521:xe
-spring.datasource.username: SECURE_DOC
-spring.datasource.password: SECURE_DOC
-spring.datasource.driverClassName: oracle.jdbc.driver.OracleDriver
-
-#esto crea la base de datos con base en el mapeo de objetos
-spring.jpa.generate-ddl: true
-#spring.jpa.hibernate.ddl-auto: create
-spring.jpa.properties.hibernate.hbm2ddl.import_files: init-data.sql
-spring.jpa.show-sql: true
-#Fin configuración de JPA
-
----
-spring.profiles: PRODUCTION 
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SECURE_DOC
+    password: SECURE_DOC
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          import_files: init-data.sql
+    show-sql: true
+spring.profiles: PRODUCTION
 fgn.loginUrl: http://10.1.6.28:8080/PortalFGN/ws-fgn/userByDoc
-
 server:
   port: 8082
 logging:
@@ -69,7 +38,6 @@ logging:
     org.springframework.beans: ERROR
     org.springframework: ERROR
     org.hibernate: ERROR
-
 zuul:
   routes:
     ui:
@@ -79,17 +47,16 @@ zuul:
     user:
       path: /user/**
       url: http://localhost:9999/sso/user
-      
-      
-#configuración de JPA      
-spring.datasource.url: jdbc:oracle:thin:@localhost:1521:xe
-spring.datasource.username: SECURE_DOC
-spring.datasource.password: SECURE_DOC
-spring.datasource.driverClassName: oracle.jdbc.driver.OracleDriver
-
-#esto crea la base de datos con base en el mapeo de objetos
-spring.jpa.generate-ddl: true
-#spring.jpa.hibernate.ddl-auto: create
-spring.jpa.properties.hibernate.hbm2ddl.import_files: init-data.sql
-spring.jpa.show-sql: true
-#Fin configuración de JPA
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SECURE_DOC
+    password: SECURE_DOC
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        hbm2ddl:
+          import_files: init-data.sql
+    show-sql: true
