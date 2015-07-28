@@ -46,17 +46,17 @@ zuul:
       
 #configuración de JPA      
 #esto crea la base de datos con base en el mapeo de objetos
-spring:
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: SECURE_DOC
-    password: SECURE_DOC
-    driverClassName: oracle.jdbc.driver.OracleDriver
-  jpa:
-    generate-ddl: true
-    hibernate.ddl-auto: create
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: true
+#spring:
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    username: SECURE_DOC
+#    password: SECURE_DOC
+#    driverClassName: oracle.jdbc.driver.OracleDriver
+#  jpa:
+#    generate-ddl: true
+#    hibernate.ddl-auto: create
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
+#    show-sql: true
 #Fin configuración de JPA
 
 ---
@@ -84,15 +84,15 @@ zuul:
       
 #configuración de JPA      
 #esto crea la base de datos con base en el mapeo de objetos
-spring:
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: SECURE_DOC
-    password: SECURE_DOC
-    driverClassName: oracle.jdbc.driver.OracleDriver
-  jpa:
-    generate-ddl: true
-    hibernate.ddl-auto: create
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: true
+#spring:
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    username: SECURE_DOC
+#    password: SECURE_DOC
+#    driverClassName: oracle.jdbc.driver.OracleDriver
+#  jpa:
+#    generate-ddl: true
+#    hibernate.ddl-auto: create
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
+#    show-sql: true
 #Fin configuración de JPA
