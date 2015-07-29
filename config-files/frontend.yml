@@ -12,3 +12,6 @@ security.sessions: NEVER
 spring.redis.host: 192.168.0.9
 
 #spring.oauth2.resource.userInfoUri: http://localhost:9999/sso/user
+
+---
+spring.profiles: DEVELOPMENT
