@@ -5,7 +5,11 @@ logging:
 server:
   port: 8083
 security.sessions: NEVER
+
+---
 spring.profiles: DEVELOPMENT_VICKY
 spring.redis.host: 192.168.59.103
+
+---
 spring.profiles: DEVELOPMENT
 spring.redis.host: 192.168.0.9
