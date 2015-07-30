@@ -1,49 +1,30 @@
-#comando para arrancar el servidor redis docker run --rm -i -t -p 6379:6379 redis
-spring.redis.host: 192.168.59.103
-
 security:
   sessions: ALWAYS
-
----
-spring.profiles: DEVELOPMENT
-
-fgn.loginUrl: http://localhost:8081/PortalFGN/ws-fgn/userByDoc
-  
 server:
   port: 8082
+eureka:
+  password: '123456'
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+
+---
+spring.profiles: DEVELOPMENT_VICKY
+
+spring.redis.host: 192.168.59.103
+fgn.loginUrl: http://localhost:8081/PortalFGN/ws-fgn/userByDoc
 logging:
   level:
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
-#    org.springframework.beans: DEBUG
-#    org.springframework: DEBUG
-#    org.hibernate: DEBUG
-
 zuul:
   routes:
-    ui:
-      url: http://localhost:8083
     fgn-pqrs:
-      url: http://localhost:8084
-#    user:
-#      path: /user/**
-#      url: http://localhost:9999/sso/user
-      
-#spring:
-#  oauth2:
-#    sso:
-#      home:
-#        secure: false
-#        path: /,/**/*.html
-#    client:
-#      accessTokenUri: http://localhost:9999/sso/oauth/token
-#      userAuthorizationUri: http://localhost:9999/sso/oauth/authorize
-#      clientId: fgn
-#      clientSecret: Mimojal263
-#    resource:
-#      userInfoUri: http://localhost:9999/sso/user
-      
-      
+      url: /pqrs/**
+      serviceId: pqrs
+    frontend:
+      path: /ui/**
+      serviceId: frontend
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
@@ -52,36 +33,25 @@ spring:
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-#    hibernate.ddl-auto: create
-    properties:
-      hibernate:
-        hbm2ddl:
-          import_files: init-data.sql
+    hibernate.ddl-auto: create
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
-      
 ---
-spring.profiles: PRODUCTION 
-fgn.loginUrl: http://10.1.6.28:8080/PortalFGN/ws-fgn/userByDoc
 
-server:
-  port: 8082
+spring.profiles: DEVELOPMENT
+spring.redis.host: 192.168.0.103
 logging:
   level:
-    org.springframework.security: ERROR
-    org.springframework.beans: ERROR
-    org.springframework: ERROR
-    org.hibernate: ERROR
-
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
 zuul:
   routes:
-    ui:
-      url: http://localhost:8083
-    pqrs:
-      url: http://localhost:8084
-    user:
-      path: /user/**
-      url: http://localhost:9999/sso/user
-      
+    fgn-pqrs:
+      url: /pqrs/**
+      serviceId: pqrs
+    frontend:
+      path: /ui/**
+      serviceId: frontend
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
@@ -90,9 +60,6 @@ spring:
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-#    hibernate.ddl-auto: create
-    properties:
-      hibernate:
-        hbm2ddl:
-          import_files: init-data.sql
+    hibernate.ddl-auto: create
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
