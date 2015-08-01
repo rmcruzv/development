@@ -1,7 +1,7 @@
 logging:
   level:
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
+    org.springframework.security: WARN
+    org.springframework.web: WARN
 server:
   port: 8083
 security.sessions: NEVER
