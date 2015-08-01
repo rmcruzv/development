@@ -12,7 +12,6 @@ eureka:
 spring.profiles: DEVELOPMENT_VICKY
 
 spring.redis.host: 192.168.59.103
-fgn.loginUrl: http://localhost:8081/PortalFGN/ws-fgn/userByDoc
 logging:
   level:
     org.springframework.security: DEBUG
