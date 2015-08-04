@@ -3,7 +3,7 @@ logging:
     org.springframework.security: WARN
     org.springframework.web: WARN
 server:
-  port: 8083
+  port: 8084
 security.sessions: NEVER
 
 ---
