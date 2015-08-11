@@ -15,6 +15,9 @@ logging:
     org.springframework.web: DEBUG
 zuul:
   routes:
+    core:
+      path: /core/**
+      serviceId: core
     fgn-pqrs:
       url: /pqrs/**
       serviceId: pqrs
