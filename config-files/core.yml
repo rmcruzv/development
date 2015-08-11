@@ -7,7 +7,7 @@ server:
 security.sessions: NEVER
 
 ---
-spring.profiles: DEVELOPMENT_VICKY
+spring.profiles: dev-vicky
 spring.redis.host: localhost
 
 ---
