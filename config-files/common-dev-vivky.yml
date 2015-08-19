@@ -5,7 +5,4 @@ logging:
 server:
   port: 8084
 security.sessions: NEVER
-
----
-spring.profiles: dev-vicky
 spring.redis.host: localhost
