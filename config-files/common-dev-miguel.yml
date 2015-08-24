@@ -1,0 +1,18 @@
+logging:
+  level:
+    org.springframework.security: WARN
+    org.springframework.web: WARN
+server:
+  port: 8084
+security.sessions: NEVER
+spring.redis.host: localhost
+mail
+  smtp
+    auth: false
+    starttls.enable: true
+    host: 10.1.7.218
+    port: 25
+    debug: false
+  from: notificacion.tics@fiscalia.gov.co
+  user: notificasi
+  password: Caracol2014
