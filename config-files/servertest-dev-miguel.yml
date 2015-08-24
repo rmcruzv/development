@@ -1,0 +1,15 @@
+security:
+  sessions: NEVER
+server:
+  port: 8094
+eureka:
+  password: '123456'
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+
+spring.redis.host: localhost
+logging:
+  level:
+    org.springframework.security: WARN
+    org.springframework.web: WARN
