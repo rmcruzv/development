@@ -1,0 +1,20 @@
+logging:
+  level:
+    org.springframework.security: WARN
+    org.springframework.web: WARN
+server:
+  port: 8085
+security.sessions: NEVER
+spring.redis.host: localhost
+
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: FGN_2015
+    password: FGN_2015
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
+    show-sql: true
