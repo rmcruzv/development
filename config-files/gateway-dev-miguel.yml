@@ -23,8 +23,8 @@ zuul:
       path: /ui/**
       serviceId: frontend
     test:
-      path: /test/**
-      serviceId: test
+      path: /servertest/**
+      serviceId: servertest
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
