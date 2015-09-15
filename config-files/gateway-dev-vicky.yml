@@ -15,15 +15,15 @@ logging:
     org.springframework.web: DEBUG
 zuul:
   routes:
-    core:
-      path: /core/**
-      serviceId: core
     fgn-pqrs:
       url: /pqrs/**
       serviceId: pqrs
     frontend:
       path: /ui/**
       serviceId: frontend
+    common:
+      path: /common/**
+      serviceId: common
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe

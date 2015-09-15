@@ -1,8 +1,0 @@
-logging:
-  level:
-    org.springframework.security: WARN
-    org.springframework.web: WARN
-server:
-  port: 8084
-security.sessions: NEVER
-spring.redis.host: localhost
