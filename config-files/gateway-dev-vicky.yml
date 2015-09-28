@@ -24,6 +24,9 @@ zuul:
     common:
       path: /common/**
       serviceId: common
+    pef:
+      path: /pef/**
+      serviceId: pef
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
