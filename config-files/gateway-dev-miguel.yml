@@ -24,3 +24,6 @@ zuul:
     common:
       path: /common/**
       serviceId: common
+    security:
+      path: /security/**
+      serviceId: security
