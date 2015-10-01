@@ -27,3 +27,6 @@ zuul:
     security:
       path: /security/**
       serviceId: security
+    pef:
+      path: /pef/**
+      serviceId: pef
