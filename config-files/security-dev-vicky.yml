@@ -1,12 +1,12 @@
 security:
   sessions: NEVER
 server:
-  port: 8086
+  port: 8081
 spring.redis.host: localhost
 logging:
   level:
-    org.springframework.security: TRACE
-    org.springframework.web: WARN
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
@@ -15,10 +15,9 @@ spring:
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: update
-    properties.hibernate.hbm2ddl.import_files: pef-init-data.sql
+    hibernate.ddl-auto: create
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
 spring.files:
   private.directory: D:/ArchivosFGN/secure
   public.directory: D:/ArchivosFGN/public
-  pef.datasheets.directory: /pef/datasheets
