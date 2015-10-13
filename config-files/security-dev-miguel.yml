@@ -19,3 +19,11 @@ spring:
     hibernate.ddl-auto: create
     properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
+ldap:
+	context-source:
+		url=ldap://40.118.255.23:389
+		userDn=uid=usuarioadpruebas,ou=system
+		password=AdmAdPrueba2014
+		base=dc=fiscalia,dc=test
+#		clean=true
+		directory.type=NORMAL
