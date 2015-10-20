@@ -1,0 +1,43 @@
+security:
+  sessions: ALWAYS
+server:
+  port: 8082
+eureka:
+  password: '123456'
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+
+spring.redis.host: localhost
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: FGN_2015
+    password: FGN_2015
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: create
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
+    show-sql: true
+zuul:
+  routes:
+    fgn-pqrs:
+      url: /pqrs/**
+      serviceId: pqrs
+    frontend:
+      path: /ui/**
+      serviceId: frontend
+    common:
+      path: /common/**
+      serviceId: common
+    security:
+      path: /security/**
+      serviceId: security
+    pef:
+      path: /pef/**
+      serviceId: pef
