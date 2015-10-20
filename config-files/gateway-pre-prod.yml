@@ -1,7 +1,5 @@
 security:
   sessions: ALWAYS
-server:
-  port: 8082
 eureka:
   password: '123456'
   client:
@@ -9,10 +7,11 @@ eureka:
       defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
 
 spring.redis.host: localhost
-logging:
-  level:
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
+logging.level.: 'WARN'
+#logging:
+#  level:
+#    org.springframework.security: WARN
+#    org.springframework.web: WARN
 spring:
   jpa:
     generate-ddl: true
