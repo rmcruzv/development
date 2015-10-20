@@ -1,7 +1,7 @@
 logging:
   level:
-    org.springframework.security: INFO
-    org.springframework.web: INFO
+    org.springframework.security: ALL
+    org.springframework.web: ALL
 server:
   port: 8084
 security.sessions: NEVER
