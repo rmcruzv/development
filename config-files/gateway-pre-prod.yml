@@ -1,7 +1,5 @@
 security:
   sessions: ALWAYS
-server:
-  port: 8082
 eureka:
   password: '123456'
   client:
