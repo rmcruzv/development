@@ -1,0 +1,11 @@
+logging:
+  level:
+    org.springframework.security: WARN
+    org.springframework.web: WARN
+server:
+  port: 8083
+security.sessions: NEVER
+eureka:
+  instance:
+    preferIpAddress: true
+spring.redis.host: localhost
