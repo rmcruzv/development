@@ -3,6 +3,9 @@ security:
 server:
   port: 8081
 spring.redis.host: localhost
+eureka:
+  instance:
+    preferIpAddress: true
 logging:
   level:
     org.springframework.security: ERROR
