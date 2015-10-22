@@ -7,5 +7,5 @@ server:
 security.sessions: NEVER
 eureka:
   instance:
-    preferIpAddress: true
+    hostname: localhost
 spring.redis.host: localhost
