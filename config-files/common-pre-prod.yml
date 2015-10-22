@@ -8,7 +8,7 @@ security.sessions: NEVER
 spring.redis.host: localhost
 eureka:
   instance:
-    preferIpAddress: true
+    hostname: localhost
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
@@ -17,7 +17,7 @@ spring:
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: update
     properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
 spring.files:
