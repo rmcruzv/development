@@ -20,8 +20,8 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: create
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
+    hibernate.ddl-auto: update
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
 zuul:
   routes:
