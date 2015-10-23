@@ -23,7 +23,7 @@ spring.files:
 ldap:
   contextSource:
     url: ldap://40.118.255.23:389
-    userDn: cn=FISCALIATEST\\usuarioadpruebas,dc=fiscalia,dc=test
+    userDn: cn=FISCALIATEST\usuarioadpruebas,dc=fiscalia,dc=test
     password: AdmAdPrueba2014
     base: dc=fiscalia,dc=test
 #    clean: true
