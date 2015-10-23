@@ -25,6 +25,7 @@ ldap:
     url: ldap://40.118.255.23:389
     userDn: uid=usuarioadpruebas,ou=system
     password: AdmAdPrueba2014
+    username: uid=usuarioadpruebas
     base: dc=fiscalia,dc=test
 #    clean: true
     directory.type: NORMAL
