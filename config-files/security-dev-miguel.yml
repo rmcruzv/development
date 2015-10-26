@@ -1,9 +1,11 @@
 security:
   sessions: NEVER
 server:
-  port: 8086
-
+  port: 8081
 spring.redis.host: localhost
+eureka:
+  instance:
+    hostname: localhost
 logging:
   level.: INFO
 spring:

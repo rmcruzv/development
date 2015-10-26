@@ -7,7 +7,7 @@ eureka:
   instance:
     hostname: localhost
 logging:
-  level.: ERROR
+  level.: INFO
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
@@ -18,15 +18,15 @@ spring:
     generate-ddl: true
     hibernate.ddl-auto: update
     properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: false
+    show-sql: true
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure
   public.directory: /home/admdevlin/ArchivosFGN/public
 ldap:
-	context-source:
-		url=ldap://40.118.255.23:389
-		userDn=uid=usuarioadpruebas,ou=system
-		password=AdmAdPrueba2014
-		base=dc=fiscalia,dc=test
-#		clean=true
-		directory.type=NORMAL
+  contextSource:
+    url: ldap://40.118.255.23:389
+    userDn: FISCALIATEST\usuarioadpruebas
+    password: AdmAdPrueba2014
+    base: dc=fiscalia,dc=test
+#    clean: true
+    directory.type: NORMAL
