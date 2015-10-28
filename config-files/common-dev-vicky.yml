@@ -5,6 +5,9 @@ logging:
 server:
   port: 8084
 security.sessions: NEVER
+eureka:
+  instance:
+    hostname: localhost
 spring.redis.host: localhost
 spring:
   datasource:
