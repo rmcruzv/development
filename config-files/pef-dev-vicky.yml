@@ -18,6 +18,9 @@ spring:
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: pef-init-data.sql
     show-sql: true
+eureka:
+  instance:
+    hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure
   public.directory: D:/ArchivosFGN/public
