@@ -6,7 +6,7 @@ spring.redis.host: localhost
 logging.level.: 'ERROR'
 #logging:
 #  level:
-#    org.springframework.security: TRACE
+#   org.springframework.security: TRACE
 #    org.springframework.web: WARN
 spring:
   datasource:
