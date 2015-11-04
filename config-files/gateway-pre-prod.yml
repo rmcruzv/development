@@ -18,7 +18,7 @@ logging:
 spring:
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: update
     properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
 zuul:
