@@ -8,7 +8,7 @@ eureka:
     serviceUrl:
       defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
   instance:
-    hostname: localhost
+    preferIpAddress: true
 spring.redis.host: localhost
 #logging.level.: 'WARN'
 logging:
