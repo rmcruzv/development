@@ -15,6 +15,9 @@ spring:
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
+    properties.hibernate.search.default:
+      directory_provider: filesystem
+      indexBase: /home/admdevlin/ArchivosFGN/lucene/indexes/
     generate-ddl: true
     hibernate.ddl-auto: update
     properties.hibernate.hbm2ddl.import_files: init-data.sql
