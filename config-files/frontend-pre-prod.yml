@@ -2,3 +2,4 @@ security.sessions: NEVER
 logging.level.: INFO
 server.port: 8083
 spring.redis.host: localhost
+eureka.instance.hostname: localhost
