@@ -23,8 +23,8 @@ spring:
     properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
 spring.files:
-  private.directory: /home/admdevlin/ArchivosFGN/secure
-  public.directory: /home/admdevlin/ArchivosFGN/public
+  private.directory: /home/admdevlin/ArchivosFGN/secure/
+  public.directory: /home/admdevlin/ArchivosFGN/public/
 ldap:
   contextSource:
     url: ldap://40.118.255.23:389/

@@ -26,5 +26,5 @@ eureka:
   instance:
     hostname: localhost
 spring.files:
-  private.directory: D:\ArchivosFGN\secure
-  public.directory: D:\ArchivosFGN\public
+  private.directory: D:/ArchivosFGN/secure/
+  public.directory: D:/ArchivosFGN/public/
