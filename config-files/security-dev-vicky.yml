@@ -3,7 +3,7 @@ security:
 server:
   port: 8081
 spring.redis.host: localhost
-logging.level.: 'ERROR'
+logging.level.: 'INFO'
 #logging:
 #  level:
 #    org.springframework.security: WARN

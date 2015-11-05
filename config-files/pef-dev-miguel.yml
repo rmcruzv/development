@@ -28,5 +28,5 @@ spring:
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
-  pef.datasheets.directory: /pef/datasheets/
+  pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50
