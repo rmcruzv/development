@@ -1,6 +1,5 @@
-logging.level.: 'ERROR'
-server:
-  port: 8083
 security.sessions: NEVER
-
+logging.level.: 'ERROR'
+server.port: 8083
 spring.redis.host: localhost
+eureka.instance.hostname: localhost
