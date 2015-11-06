@@ -1,5 +1,4 @@
-security:
-  sessions: NEVER
+#security.sessions: NEVER
 server:
   port: 8081
 spring.redis.host: localhost
