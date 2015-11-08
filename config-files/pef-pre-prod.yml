@@ -22,7 +22,7 @@ eureka:
   instance:
     hostname: localhost
 spring.files:
-  private.directory: /home/admdevlin/ArchivosFGN/secure
-  public.directory: /home/admdevlin/ArchivosFGN/public
-  pef.datasheets.directory: /pef/datasheets
+  private.directory: /home/admdevlin/ArchivosFGN/secure/
+  public.directory: /home/admdevlin/ArchivosFGN/public/
+  pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50

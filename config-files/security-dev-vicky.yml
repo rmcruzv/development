@@ -1,9 +1,8 @@
-security:
-  sessions: NEVER
+security.sessions: NEVER
 server:
   port: 8081
 spring.redis.host: localhost
-logging.level.: 'ERROR'
+logging.level.: 'INFO'
 #logging:
 #  level:
 #    org.springframework.security: WARN
@@ -26,5 +25,5 @@ eureka:
   instance:
     hostname: localhost
 spring.files:
-  private.directory: D:\ArchivosFGN\secure
-  public.directory: D:\ArchivosFGN\public
+  private.directory: D:/ArchivosFGN/secure/
+  public.directory: D:/ArchivosFGN/public/
