@@ -13,13 +13,12 @@ spring:
     username: FGN_2015
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
-    initial-size: 40
   jpa:
     properties.hibernate.search.default:
       directory_provider: filesystem
       indexBase: d:/archivosFGN/lucene/indexes/
     generate-ddl: true
-    hibernate.ddl-auto: update
+    hibernate.ddl-auto: update 
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
 eureka:
