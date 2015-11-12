@@ -16,7 +16,7 @@ spring:
     generate-ddl: true
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: true
+    show-sql: false
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/

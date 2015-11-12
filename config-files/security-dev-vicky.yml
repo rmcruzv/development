@@ -2,7 +2,7 @@ security.sessions: NEVER
 server:
   port: 8081
 spring.redis.host: localhost
-logging.level.: 'INFO'
+logging.level.: 'ERROR'
 #logging:
 #  level:
 #    org.springframework.security: WARN
@@ -20,7 +20,7 @@ spring:
     generate-ddl: true
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: true
+    show-sql: false
 eureka:
   instance:
     hostname: localhost

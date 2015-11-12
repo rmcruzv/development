@@ -16,4 +16,4 @@ spring:
     generate-ddl: true
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: pqrs-init-data.sql
-    show-sql: true
+    show-sql: false
