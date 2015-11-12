@@ -31,10 +31,11 @@ hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 10000
     strategy: THREAD
-  threadpool.default.coreSize: 250
+  threadpool.default.coreSize: 400
 ribbon:
-  ConnectTimeout: 5000
-  ReadTimeout: 20000
+  ConnectTimeout: 200
+  MaxAutoRetries: 1
+  ReadTimeout:  500
 gateway:
   ribbon:
     listOfServers: localhost:8082
