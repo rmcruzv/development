@@ -22,6 +22,7 @@ spring:
     username: FGN_2015
     password: FGN_2015
     driver-class-name: oracle.jdbc.driver.OracleDriver
+    initial-size: 40
   jpa:
     generate-ddl: true
     hibernate.ddl-auto: update
