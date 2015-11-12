@@ -29,9 +29,9 @@ spring:
     show-sql: false
 hystrix:
   command.default.execution.isolation:
-    thread.timeoutInMilliseconds: 0000
+    thread.timeoutInMilliseconds: 20000
     strategy: THREAD
-  threadpool.default.coreSize: 20
+  threadpool.default.coreSize: 10
 ribbon:
   ConnectTimeout: 20000
   ReadTimeout: 20000
