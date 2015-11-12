@@ -27,7 +27,9 @@ spring:
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+hystrix:
+  command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+  threadpool.default.coreSize: 20
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
