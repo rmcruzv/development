@@ -29,16 +29,19 @@ spring:
     show-sql: false
 hystrix:
   command.default.execution.isolation:
-    thread.timeoutInMilliseconds: 20000
+    thread.timeoutInMilliseconds: 60000
     strategy: THREAD
-  threadpool.default.coreSize: 15
+  threadpool.default.coreSize: 20
 ribbon:
-  ConnectTimeout: 10000
-  ReadTimeout: 20000
+  ConnectTimeout: 60000
+  ReadTimeout: 60000
 gateway:
   ribbon:
     listOfServers: localhost:8082
 zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
   routes:
     fgn-pqrs:
       url: /pqrs/**
