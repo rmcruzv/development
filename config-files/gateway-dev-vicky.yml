@@ -22,17 +22,19 @@ spring:
     username: FGN_2015
     password: FGN_2015
     driver-class-name: oracle.jdbc.driver.OracleDriver
-  jpa: 
+  jpa:
     generate-ddl: true
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
 hystrix:
-  command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+  command.default.execution.isolation:
+  thread.timeoutInMilliseconds: 20000
+  strategy: THREAD
   threadpool.default.coreSize: 15
 ribbon:
-  ConnectTimeout: 30000
-  ReadTimeout: 60000
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
 gateway:
   ribbon:
     listOfServers: localhost:8082
