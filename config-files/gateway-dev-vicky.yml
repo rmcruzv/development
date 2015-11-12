@@ -31,7 +31,7 @@ hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 10000
     strategy: THREAD
-  threadpool.default.coreSize: 100
+  threadpool.default.coreSize: 250
 ribbon:
   ConnectTimeout: 5000
   ReadTimeout: 20000
