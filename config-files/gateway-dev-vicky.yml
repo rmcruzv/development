@@ -27,16 +27,16 @@ spring:
     hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 gateway:
   ribbon:
     listOfServers: localhost:8082
-    ConnectTimeout: 10000
-    ReadTimeout: 10000
+    ConnectTimeout: 60000
+    ReadTimeout: 60000
 zuul:
-  host:
-    connect-timeout-millis: 10000
-    socket-timeout-millis: 10000
+#  host:
+#    connect-timeout-millis: 60000
+#    socket-timeout-millis: 60000
   routes:
     fgn-pqrs:
       url: /pqrs/**
