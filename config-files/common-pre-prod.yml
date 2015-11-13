@@ -11,7 +11,7 @@ eureka:
     hostname: localhost
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
+    url: jdbc:oracle:thin:@10.1.7.183:1521:portaldbdev
     username: FGN_2015
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver

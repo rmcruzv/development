@@ -1,0 +1,63 @@
+security:
+  sessions: ALWAYS
+server:
+  port: 8082
+eureka:
+  password: '123456'
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+  instance:
+#    preferIpAddress: true
+    hostname: localhost
+spring.redis.host: localhost
+logging.level.: 'WARN'
+#logging:
+#  level:
+#    org.springframework.security: WARN
+#    org.springframework.web: WARN
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: FGN_2015
+    password: FGN_2015
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: update
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
+    show-sql: false
+hystrix:
+  command.default.execution.isolation:
+#    semaphore.maxConcurrentRequests: 400
+    thread.timeoutInMilliseconds: 20000
+    strategy: THREAD
+#  threadpool.default.coreSize: 400
+  
+ribbon:
+  ConnectTimeout: 10000
+  MaxAutoRetries: 1
+  ReadTimeout:  20000
+gateway:
+  ribbon:
+    listOfServers: localhost:8082
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 20000
+  routes:
+    fgn-pqrs:
+      url: /pqrs/**
+      serviceId: pqrs
+    frontend:
+      path: /ui/**
+      serviceId: frontend
+    common:
+      path: /common/**
+      serviceId: common
+    security:
+      path: /security/**
+      serviceId: security
+    pef:
+      path: /pef/**
+      serviceId: pef
