@@ -1,4 +1,4 @@
-logging.level.: 'WARN'
+logging.level.: 'ERROR'
 server:
   port: 8084
 security.sessions: NEVER
