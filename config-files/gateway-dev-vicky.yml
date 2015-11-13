@@ -29,9 +29,11 @@ spring:
     show-sql: false
 hystrix:
   command.default.execution.isolation:
+    semaphore.maxConcurrentRequests: 400
     thread.timeoutInMilliseconds: 20000
     strategy: THREAD
   threadpool.default.coreSize: 400
+  
 ribbon:
   ConnectTimeout: 5000
   MaxAutoRetries: 1
