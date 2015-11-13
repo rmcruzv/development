@@ -1,6 +1,7 @@
 security:
   sessions: ALWAYS
 server:
+  contextPath: /portal
   port: 8082
 eureka:
   password: '123456'
