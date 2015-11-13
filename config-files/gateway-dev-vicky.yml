@@ -11,7 +11,7 @@ eureka:
 #    preferIpAddress: true
     hostname: localhost
 spring.redis.host: localhost
-logging.level.: 'ERROR'
+logging.level.: 'WARN'
 #logging:
 #  level:
 #    org.springframework.security: WARN
