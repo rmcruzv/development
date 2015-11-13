@@ -35,7 +35,7 @@ hystrix:
   threadpool.default.coreSize: 400
   
 ribbon:
-  ConnectTimeout: 5000
+  ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  20000
 gateway:
