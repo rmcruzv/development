@@ -42,9 +42,9 @@ gateway:
   ribbon:
     listOfServers: localhost:8082
 zuul:
-#  host:
-#    connect-timeout-millis: 10000
-#    socket-timeout-millis: 20000
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 20000
   routes:
     fgn-pqrs:
       url: /pqrs/**
