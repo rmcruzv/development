@@ -1,4 +1,4 @@
-logging.level.: 'ERROR'
+logging.level.: 'INFO'
 server:
   port: 8084
 security.sessions: NEVER
