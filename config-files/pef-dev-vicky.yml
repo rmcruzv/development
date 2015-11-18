@@ -26,3 +26,18 @@ spring.files:
   public.directory: D:/ArchivosFGN/public/
   pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50
+
+hystrix:
+  command.default.execution.isolation:
+#    semaphore.maxConcurrentRequests: 400
+    thread.timeoutInMilliseconds: 20000
+    strategy: THREAD
+#  threadpool.default.coreSize: 400
+  
+ribbon:
+  ConnectTimeout: 10000
+  MaxAutoRetries: 1
+  ReadTimeout:  20000
+gateway:
+  ribbon:
+    listOfServers: localhost:8082
