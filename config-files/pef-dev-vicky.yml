@@ -34,10 +34,10 @@ constants.max.pef_data_sheet: 50
 #    strategy: THREAD
 ##  threadpool.default.coreSize: 400
 #  
-#ribbon:
-#  ConnectTimeout: 10000
-#  MaxAutoRetries: 1
-#  ReadTimeout:  20000
+ribbon:
+  ConnectTimeout: 10000
+  MaxAutoRetries: 1
+  ReadTimeout:  20000
 gateway:
   ribbon:
     listOfServers: localhost:8082
