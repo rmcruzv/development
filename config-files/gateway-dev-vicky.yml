@@ -1,7 +1,7 @@
 security:
   sessions: ALWAYS
-server:
-  contextPath: /portal
+#server:
+#  contextPath: /portal
   port: 8082
 eureka:
   password: '123456'
@@ -41,7 +41,7 @@ ribbon:
   ReadTimeout:  20000
 gateway:
   ribbon:
-    listOfServers: localhost:8082/portal
+    listOfServers: localhost:8082
 zuul:
   host:
     connect-timeout-millis: 10000
