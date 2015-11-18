@@ -26,3 +26,6 @@ spring.files:
   public.directory: D:/ArchivosFGN/public/
   pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50
+gateway:
+  ribbon:
+    listOfServers: localhost:8082/portal
