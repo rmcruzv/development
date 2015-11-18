@@ -25,7 +25,7 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: update
+    hibernate.ddl-auto: create
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
 hystrix:
