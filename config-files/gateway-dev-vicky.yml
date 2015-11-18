@@ -12,7 +12,7 @@ eureka:
 #    preferIpAddress: true
     hostname: localhost
 spring.redis.host: localhost
-logging.level.: 'WARN'
+logging.level.: 'INFO'
 #logging:
 #  level:
 #    org.springframework.security: WARN
@@ -25,7 +25,7 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: create-drop
+    hibernate.ddl-auto: update
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
 hystrix:

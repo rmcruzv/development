@@ -1,7 +1,4 @@
-logging:
-  level:
-    org.springframework.security: WARN
-    org.springframework.web: WARN
+logging.level.: 'INFO'
 server:
   port: 8085
 security.sessions: NEVER

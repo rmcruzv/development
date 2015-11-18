@@ -2,7 +2,7 @@ security.sessions: NEVER
 server:
   port: 8086
 spring.redis.host: localhost
-logging.level.: 'ERROR'
+logging.level.: 'INFO'
 #logging:
 #  level:
 #    org.springframework.security: TRACE
