@@ -26,8 +26,7 @@ spring.files:
   public.directory: D:/ArchivosFGN/public/
   pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50
-
 hystrix:
   command.default.execution.isolation:
-    thread.timeoutInMilliseconds: 20000
+    thread.timeoutInMilliseconds: 12000
     strategy: THREAD

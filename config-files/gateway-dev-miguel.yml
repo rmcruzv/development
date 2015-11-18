@@ -25,7 +25,23 @@ spring:
     hibernate.ddl-auto: create
     properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: true
+
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 12000
+    strategy: THREAD
+ribbon:
+  ConnectTimeout: 10000
+  MaxAutoRetries: 1
+  ReadTimeout:  12000
+gateway:
+  ribbon:
+    listOfServers: localhost:8082
+
 zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 12000
   routes:
     fgn-pqrs:
       url: /pqrs/**
