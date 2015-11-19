@@ -53,10 +53,10 @@ zuul:
       serviceId: frontend
     common:
       path: /common/**
-      serviceId: common
+      serviceId: core
     security:
       path: /security/**
-      serviceId: security
+      serviceId: core
     pef:
       path: /pef/**
       serviceId: pef
