@@ -1,7 +1,6 @@
 security:
   sessions: ALWAYS
 server:
-#  contextPath: /portal
   port: 8082
 eureka:
   password: '123456'
@@ -12,7 +11,7 @@ eureka:
 #    preferIpAddress: true
     hostname: localhost
 spring.redis.host: localhost
-logging.level.: 'INFO'
+logging.level.: WARN
 #logging:
 #  level:
 #    org.springframework.security: WARN
