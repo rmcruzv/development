@@ -1,0 +1,26 @@
+logging.level.: WARN
+server:
+  port: 8087
+spring.redis.host: localhost
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: FGN_2015
+    password: FGN_2015
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    show-sql: false
+eureka:
+  instance:
+    hostname: localhost
+spring.files:
+  private.directory: D:/ArchivosFGN/secure/
+  public.directory: D:/ArchivosFGN/public/
+  pef.feab.directory: feab/
+constants.max.feab_data_sheet: 50
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 12000
+    strategy: THREAD
