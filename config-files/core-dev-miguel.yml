@@ -1,10 +1,7 @@
-#logging.level.: INFO
-logging:
-  level:
-    org.springframework.security: WARN
-    org.springframework.web: WARN
+security.sessions: NEVER
 server:
   port: 8081
+logging.level: WARN
 spring:
   redis.host: localhost
   datasource:
@@ -17,7 +14,7 @@ spring:
       directory_provider: filesystem
       indexBase: d:/archivosFGN/lucene/indexes/
     generate-ddl: true
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
     hibernate.ddl-auto: update
     show-sql: false
 eureka:
