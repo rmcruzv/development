@@ -7,7 +7,8 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: FGN_2015
-    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
+    password: FGN_2015
+#    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     properties.hibernate.search.default:
