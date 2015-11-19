@@ -1,0 +1,28 @@
+logging.level.: ERROR
+server:
+  port: 8081
+spring:
+  redis.host: localhost
+  datasource:
+    url: jdbc:oracle:thin:@10.1.7.183:1521/portaldbdev
+    username: system
+    password: '{cipher}5545ea6212fd4db7ddcb23a8c18e31d242ce0abd6e01c0bafdd6ad8241c47fd6'
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    properties.hibernate.search.default:
+      directory_provider: filesystem
+      indexBase: d:/archivosFGN/lucene/indexes/
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    show-sql: false
+eureka:
+  instance:
+    hostname: localhost
+spring.files:
+  private.directory: /home/admdevlin/ArchivosFGN/secure/
+  public.directory: /home/admdevlin/ArchivosFGN/public/
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 10000
+    strategy: THREAD
