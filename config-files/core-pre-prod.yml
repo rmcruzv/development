@@ -6,8 +6,8 @@ spring:
   redis.host: localhost
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
-    username: system
-    password: '{cipher}5545ea6212fd4db7ddcb23a8c18e31d242ce0abd6e01c0bafdd6ad8241c47fd6'
+    username: FGN_2015
+    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
