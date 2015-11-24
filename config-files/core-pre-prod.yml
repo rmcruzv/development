@@ -1,18 +1,19 @@
+security.sessions: NEVER
 logging.level.: ERROR
 server:
   port: 8081
 spring:
   redis.host: localhost
   datasource:
-    url: jdbc:oracle:thin:@10.1.7.183:1521/portaldbdev
-    username: system
-    password: '{cipher}5545ea6212fd4db7ddcb23a8c18e31d242ce0abd6e01c0bafdd6ad8241c47fd6'
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: FGN_2015
+    password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
     properties.hibernate.search.default:
       directory_provider: filesystem
-      indexBase: d:/archivosFGN/lucene/indexes/
+      indexBase: /home/admdevlin/archivosFGN/lucene/indexes/
     generate-ddl: true
     hibernate.ddl-auto: update
     show-sql: false
