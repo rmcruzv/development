@@ -59,3 +59,6 @@ zuul:
     pef:
       path: /pef/**
       serviceId: pef
+    feab:
+      path: /feab/**
+      serviceId: feab
