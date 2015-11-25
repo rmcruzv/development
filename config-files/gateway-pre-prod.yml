@@ -8,13 +8,13 @@ eureka:
     serviceUrl:
       defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
   instance:
-    preferIpAddress: true
+    preferIpAddress: false
 spring.redis.host: localhost
 #logging.level.: 'WARN'
 logging:
   level:
-    org.springframework.security: WARN
-    org.springframework.web: WARN
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
 spring:
   jpa:
     generate-ddl: true
