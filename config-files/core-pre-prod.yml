@@ -5,7 +5,7 @@ server:
 spring:
   redis.host: azdevlinfgn2.cloudapp.net
   datasource:
-    url: jdbc:oracle:thin:@azdevlinfgn3.cloudapp.net:1521:xe
+    url: jdbc:oracle:thin:@azdevlinfgn.cloudapp.net:1521:xe
     username: FGN_2015
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
