@@ -3,7 +3,7 @@ security:
 server:
   port: 8086
 spring.redis.host: localhost
-logging.level.: 'ERROR'
+logging.level.: WARN
 #logging:
 #  level:
 #   org.springframework.security: TRACE
