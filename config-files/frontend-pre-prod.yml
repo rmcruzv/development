@@ -1,5 +1,5 @@
 security.sessions: NEVER
 logging.level.: INFO
 server.port: 8083
-spring.redis.host: localhost
-eureka.instance.hostname: localhost
+spring.redis.host: azdevlinfgn2.cloudapp.net
+eureka.instance.hostname: azdevlinfgn2.cloudapp.net

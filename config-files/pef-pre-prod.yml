@@ -2,7 +2,7 @@ security:
   sessions: NEVER
 server:
   port: 8086
-spring.redis.host: localhost
+spring.redis.host: azdevlinfgn2.cloudapp.net
 logging.level.: 'ERROR'
 #logging:
 #  level:
@@ -10,7 +10,7 @@ logging.level.: 'ERROR'
 #    org.springframework.web: WARN
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
+    url: jdbc:oracle:thin:@azdevlinfgn3.cloudapp.net:1521:xe
     username: FGN_2015
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
@@ -20,7 +20,7 @@ spring:
     show-sql: true
 eureka:
   instance:
-    hostname: localhost
+    hostname: azdevlinfgn2.cloudapp.net
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
