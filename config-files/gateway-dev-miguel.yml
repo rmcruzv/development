@@ -43,18 +43,18 @@ zuul:
     connect-timeout-millis: 10000
     socket-timeout-millis: 12000
   routes:
-    fgn-pqrs:
-      url: /pqrs/**
-      serviceId: pqrs
     frontend:
       path: /ui/**
       serviceId: frontend
     common:
       path: /common/**
-      serviceId: common
+      serviceId: core
     security:
       path: /security/**
-      serviceId: security
+      serviceId: core
     pef:
       path: /pef/**
       serviceId: pef
+    feab:
+      path: /goods/**
+      serviceId: goods
