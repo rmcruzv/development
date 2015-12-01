@@ -1,7 +1,7 @@
 security.sessions: NEVER
 logging.level.: ERROR
 server:
-  port: 8084
+  port: 8081
 spring:
   redis.host: 192.168.12.9
   datasource:
