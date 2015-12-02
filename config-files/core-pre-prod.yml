@@ -19,7 +19,7 @@ spring:
     show-sql: false
 eureka:
   serviceUrl:
-    default: http://192.168.12.9:8761/
+    default: http://192.168.12.9:8761/eureka/
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
