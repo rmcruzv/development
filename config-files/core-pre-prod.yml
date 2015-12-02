@@ -18,12 +18,8 @@ spring:
     hibernate.ddl-auto: update
     show-sql: false
 eureka:
-  instance:
-    hostname: 192.168.12.9
-    preferIpAddress: true
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.12.9:8761/
+  serviceUrl:
+    default: http://192.168.12.9:8761/
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
