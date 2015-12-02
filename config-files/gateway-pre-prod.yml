@@ -9,7 +9,7 @@ eureka:
       defaultZone: http://user:${eureka.password}@192.168.12.9:8761/eureka/
   instance:
     preferIpAddress: false
-spring.redis.host: localhost
+spring.redis.host: 192.168.12.9
 #logging.level.: 'WARN'
 logging:
   level:
