@@ -22,6 +22,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://user:${eureka.password}@192.168.12.9:8761/eureka/
+  instance:
+    preferIpAddress: true
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
