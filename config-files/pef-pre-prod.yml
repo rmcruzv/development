@@ -1,26 +1,26 @@
+logging.level.: WARN
 security:
   sessions: NEVER
 server:
   port: 8086
-spring.redis.host: localhost
-logging.level.: WARN
-#logging:
-#  level:
-#   org.springframework.security: TRACE
-#    org.springframework.web: WARN
 spring:
+  redis.host: 192.168.12.9
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
+    url: jdbc:oracle:thin:@192.168.12.7:1521:xe
     username: FGN_2015
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
     hibernate.ddl-auto: update
-    show-sql: true
+    show-sql: false
 eureka:
+  password: '123456'
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@192.168.12.9:8761/eureka/
   instance:
-    hostname: localhost
+    preferIpAddress: true
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
