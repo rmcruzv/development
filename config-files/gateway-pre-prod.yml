@@ -10,11 +10,11 @@ eureka:
   instance:
     preferIpAddress: false
 spring.redis.host: 192.168.12.9
-#logging.level.: 'WARN'
-logging:
-  level:
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
+logging.level.: WARN
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
+#    org.springframework.web: DEBUG
 spring:
   jpa:
     generate-ddl: true

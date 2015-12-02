@@ -1,5 +1,5 @@
 security.sessions: NEVER
-logging.level.: INFO
+logging.level.: WARN
 server:
   port: 8081
 spring:
