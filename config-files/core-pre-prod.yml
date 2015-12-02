@@ -19,7 +19,7 @@ spring:
     show-sql: false
 eureka:
   instance:
-    hostname: 192.168.12.9
+    hostname: 192.168.12.7
     preferIpAddress: true
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
