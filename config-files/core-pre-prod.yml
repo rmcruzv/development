@@ -19,7 +19,7 @@ spring:
     show-sql: false
 eureka:
   instance:
-    hostname: 192.168.12.7
+    hostname: 192.168.12.9
   instance:
     preferIpAddress: false
 spring.files:
