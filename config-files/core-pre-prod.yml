@@ -20,6 +20,8 @@ spring:
 eureka:
   instance:
     hostname: 192.168.12.7
+  instance:
+    preferIpAddress: false
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
