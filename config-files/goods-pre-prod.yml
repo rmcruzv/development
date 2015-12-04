@@ -11,6 +11,7 @@ spring:
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
     generate-ddl: true
     hibernate.ddl-auto: update
     show-sql: false
