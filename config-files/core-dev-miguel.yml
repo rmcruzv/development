@@ -17,7 +17,6 @@ spring:
       indexBase: d:/archivosFGN/lucene/indexes/
     generate-ddl: true
 #    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    hibernate.ddl-auto: update
     show-sql: false
 eureka:
   instance:
