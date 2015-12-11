@@ -22,7 +22,7 @@ spring:
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     generate-ddl: true
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: update
     properties.hibernate.hbm2ddl.import_files: pef-init-data.sql
     show-sql: true
 spring.files:
