@@ -1,7 +1,7 @@
 security.sessions: NEVER
 server:
   port: 8081
-logging.level.: WARN
+logging.level.: DEBUG
 spring:
   redis.host: localhost
   datasource:
