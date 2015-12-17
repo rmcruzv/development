@@ -11,7 +11,7 @@ spring:
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
-    hibernate.ddl-auto: create
+    hibernate.ddl-auto: update
     properties.hibernate.search.default:
       directory_provider: filesystem
       indexBase: d:/archivosFGN/lucene/indexes/
