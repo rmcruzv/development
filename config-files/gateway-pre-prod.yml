@@ -33,7 +33,9 @@ ribbon:
 gateway:
   ribbon:
     listOfServers: localhost:8082
-
+spring.files:
+  private.directory: /home/admdevlin/ArchivosFGN/secure/
+  public.directory: /home/admdevlin/ArchivosFGN/public/
 zuul:
   host:
     connect-timeout-millis: 10000
