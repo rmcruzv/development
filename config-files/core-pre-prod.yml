@@ -6,7 +6,7 @@ spring:
   redis.host: 192.168.12.9
   datasource:
     url: jdbc:oracle:thin:@192.168.12.7:1521:xe
-    username: FGN_2015
+    username: SUSI_CORE
     password: FGN_2015
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
