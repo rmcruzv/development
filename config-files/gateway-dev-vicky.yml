@@ -3,6 +3,11 @@ security:
 server:
   port: 8082
   context-path: /portal
+  ssl: 
+    key-store: keystore.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat
 eureka:
   password: '123456'
   client:

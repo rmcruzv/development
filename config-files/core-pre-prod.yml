@@ -27,6 +27,7 @@ eureka:
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
+  core.userPictures.directory: user-pictures/
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 10000
