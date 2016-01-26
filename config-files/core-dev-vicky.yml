@@ -6,7 +6,7 @@ server:
     key-store-password: Mimojal263!.
     keyStoreType: PKCS12
     keyAlias: tomcat
-logging.level.: INFO
+logging.level.: DEBUG
 spring:
   redis.host: localhost
   datasource:
@@ -23,7 +23,7 @@ spring:
     show-sql: false
 eureka:
   instance:
-#    securePortEnabled: true
+    securePortEnabled: true
     hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
