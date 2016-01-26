@@ -1,6 +1,11 @@
 security.sessions: NEVER
 server:
   port: 8081
+  ssl: 
+    key-store: keystore.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat
 logging.level.: INFO
 spring:
   redis.host: localhost
