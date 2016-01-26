@@ -19,6 +19,7 @@ spring:
     show-sql: false
 eureka:
   instance:
+    securePortEnabled: true
     hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
