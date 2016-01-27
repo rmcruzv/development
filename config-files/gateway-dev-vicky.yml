@@ -21,6 +21,7 @@ server:
 eureka:
   instance:
 #    secureVirtualHostName: ${spring.application.name}
+    hostname: localhost
     securePort: ${server.port}
     securePortEnabled: true  
     nonSecurePortEnabled: false 
@@ -59,6 +60,7 @@ ribbon:
 gateway:
   ribbon:
     listOfServers: localhost:8082
+    IsSecured: true
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
