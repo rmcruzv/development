@@ -10,7 +10,7 @@ server:
     key-store-type: PKCS12
     key-store-password: Mimojal263!.
 eureka:
-  password: '123456'
+  password: 'FGN2015!.'
   client:
     serviceUrl:
       defaultZone: https://user:${eureka.password}@localhost:8761/eureka/
