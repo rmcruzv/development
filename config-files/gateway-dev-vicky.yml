@@ -10,20 +10,21 @@ server:
     keyStoreType: PKCS12
     keyAlias: tomcat-gateway
     key-password: Mimojal263!.
-eureka:
-  password: '123456'
-  client:
-    serviceUrl:
-      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
-  instance:
-#    preferIpAddress: true
-    hostname: localhost
+#eureka:
+#  password: '123456'
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+#  instance:
+##    preferIpAddress: true
+#    hostname: localhost
     
     
 eureka:
   client:
     enabled: true
   instance:
+    hostname: localhost
     securePort: ${server.port}
     securePortEnabled: true  
     nonSecurePortEnabled: false 
