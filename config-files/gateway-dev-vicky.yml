@@ -58,9 +58,10 @@ ribbon:
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000
-gateway:
-  ribbon:
-    listOfServers: localhost:8082
+  IsSecure: true
+#gateway:
+#  ribbon:
+#    listOfServers: localhost:8082
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/

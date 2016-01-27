@@ -35,8 +35,6 @@ spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
   core.userPictures.directory: user-pictures/
-ribbon:
-  IsSecure: true
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 10000

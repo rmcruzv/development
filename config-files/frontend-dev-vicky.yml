@@ -1,5 +1,19 @@
 security.sessions: NEVER
 logging.level.: WARN
-server.port: 8083
 spring.redis.host: localhost
-eureka.instance.hostname: localhost
+server:
+  port: 8083
+  ssl:
+    enabled: true
+    key-store: keystore-susi.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-susi
+    key-password: Mimojal263!.
+eureka:
+  instance:
+    hostname: localhost
+    securePortEnabled: true
+    securePort: ${server.port}    
+ribbon:
+  IsSecure: true
