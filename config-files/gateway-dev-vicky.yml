@@ -20,7 +20,7 @@ server:
 #    hostname: localhost
 eureka:
   instance:
-#    hostname: localhost
+#    secureVirtualHostName: ${spring.application.name}
     securePort: ${server.port}
     securePortEnabled: true  
     nonSecurePortEnabled: false 
@@ -55,6 +55,7 @@ ribbon:
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000
+  IsSecure: true
 gateway:
   ribbon:
     listOfServers: localhost:8082
