@@ -1,11 +1,11 @@
 logging.level.: WARN
 server:
   port: 8086
-  ssl: 
-    key-store: keystore.p12
-    key-store-password: Mimojal263!.
-    keyStoreType: PKCS12
-    keyAlias: tomcat
+#  ssl: 
+#    key-store: keystore.p12
+#    key-store-password: Mimojal263!.
+#    keyStoreType: PKCS12
+#    keyAlias: tomcat
 spring.redis.host: localhost
 spring:
   datasource:
@@ -19,7 +19,7 @@ spring:
     show-sql: false
 eureka:
   instance:
-    securePortEnabled: true
+#    securePortEnabled: true
     hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
