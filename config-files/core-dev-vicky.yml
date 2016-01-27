@@ -28,6 +28,8 @@ eureka:
     serviceUrl:
       defaultZone: https://localhost:8761/eureka/
   instance:
+    securePortEnabled: true
+    securePort: ${server.port}    
     hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
