@@ -18,11 +18,7 @@ server:
 #  instance:
 ##    preferIpAddress: true
 #    hostname: localhost
-    
-    
 eureka:
-  client:
-    enabled: true
   instance:
     hostname: localhost
     securePort: ${server.port}
