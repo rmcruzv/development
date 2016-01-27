@@ -10,26 +10,28 @@ server:
     keyStoreType: PKCS12
     keyAlias: tomcat-susi
     key-password: Mimojal263!.
-#eureka:
-#  password: '123456'
-#  client:
-#    serviceUrl:
-#      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
-#  instance:
-##    preferIpAddress: true
-#    hostname: localhost
 eureka:
-  instance:
-    secureVirtualHostName: ${spring.application.name}
-    hostname: localhost
-    securePort: ${server.port}
-    securePortEnabled: true  
-    nonSecurePortEnabled: false 
-    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+  password: '123456'
   client:
-    enabled: true
     serviceUrl:
-      defaultZone: https://localhost:8761/eureka/
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+  instance:
+#    preferIpAddress: true
+    hostname: localhost
+
+
+#eureka:
+#  instance:
+#    secureVirtualHostName: ${spring.application.name}
+#    hostname: localhost
+#    securePort: ${server.port}
+#    securePortEnabled: true  
+#    nonSecurePortEnabled: false 
+#    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+#  client:
+#    enabled: true
+#    serviceUrl:
+#      defaultZone: https://localhost:8761/eureka/
       
 spring.redis.host: localhost
 logging.level.: WARN
