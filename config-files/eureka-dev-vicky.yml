@@ -21,11 +21,10 @@ server:
   port: 8761
   ssl:
     enabled: true
-    key-store: keystore-core.p12
+    key-alias: tomcat-core
+    key-store: "keystore-core.p12"
     key-store-password: Mimojal263!.
     key-password: Mimojal263!.       
-
-
 eureka:
   enableSelfPreservation: false
   instance:
