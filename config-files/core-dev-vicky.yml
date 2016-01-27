@@ -1,6 +1,13 @@
 security.sessions: NEVER
 server:
   port: 8081
+  ssl:
+    enabled: true
+    key-store: keystore-susi.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-susi
+    key-password: Mimojal263!.
 logging.level.: INFO
 spring:
   redis.host: localhost
@@ -17,12 +24,19 @@ spring:
     hibernate.ddl-auto: update 
     show-sql: false
 eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: https://localhost:8761/eureka/
   instance:
     hostname: localhost
+    securePortEnabled: true
+    securePort: ${server.port}    
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
   core.userPictures.directory: user-pictures/
+ribbon:
+  IsSecure: true
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 10000
