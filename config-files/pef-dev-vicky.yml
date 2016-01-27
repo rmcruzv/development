@@ -31,6 +31,7 @@ spring.files:
 constants.max.pef_data_sheet: 50
 gateway:
   ribbon:
+    IsSecure: true
     NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList 
 # the server must register itself with Eureka server with VipAddress "myservice"
     DeploymentContextBasedVipAddresses: gateway
