@@ -5,10 +5,10 @@ server:
   context-path: /portal
   ssl:
     enabled: true
-    key-store: keystore-gateway.p12
+    key-store: keystore-susi.p12
     key-store-password: Mimojal263!.
     keyStoreType: PKCS12
-    keyAlias: tomcat-gateway
+    keyAlias: tomcat-susi
     key-password: Mimojal263!.
 #eureka:
 #  password: '123456'
@@ -20,12 +20,13 @@ server:
 #    hostname: localhost
 eureka:
   instance:
-    hostname: localhost
+#    hostname: localhost
     securePort: ${server.port}
     securePortEnabled: true  
     nonSecurePortEnabled: false 
     homePageUrl: https://${eureka.instance.hostname}:${server.port}/
   client:
+    enabled: true
     serviceUrl:
       defaultZone: https://localhost:8761/eureka/
       

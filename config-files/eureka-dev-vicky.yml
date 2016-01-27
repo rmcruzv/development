@@ -3,10 +3,10 @@ server:
   port: 8761
   ssl:
     enabled: true
-    key-store: keystore-eureka.p12
+    key-store: keystore-susi.p12
     key-store-password: Mimojal263!.
     keyStoreType: PKCS12
-    keyAlias: tomcat-eureka
+    keyAlias: tomcat-susi
     key-password: Mimojal263!.
 
 security:
