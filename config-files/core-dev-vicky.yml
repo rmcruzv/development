@@ -25,8 +25,8 @@ spring:
     show-sql: false
 eureka:
   instance:
-#    securePortEnabled: true
-#    securePort: 8081    
+    securePortEnabled: true
+    securePort: 8081    
     hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
