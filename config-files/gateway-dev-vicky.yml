@@ -3,6 +3,13 @@ security:
 server:
   port: 8082
   context-path: /portal
+  ssl:
+    enabled: true
+    key-store: keystore-gateway.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-gateway
+    key-password: Mimojal263!.
 eureka:
   password: '123456'
   client:
@@ -11,6 +18,20 @@ eureka:
   instance:
 #    preferIpAddress: true
     hostname: localhost
+    
+    
+eureka:
+  client:
+    enabled: true
+  instance:
+    securePort: ${server.port}
+    securePortEnabled: true  
+    nonSecurePortEnabled: false 
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+  client:
+    serviceUrl:
+      defaultZone: https://localhost:8761/eureka/
+      
 spring.redis.host: localhost
 logging.level.: WARN
 #logging:
