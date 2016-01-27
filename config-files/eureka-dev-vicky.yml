@@ -1,6 +1,14 @@
 logging.level.: 'INFO'
 server:
   port: 8761
+  ssl:
+    enabled: true
+    key-store: keystore-eureka.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-eureka
+    key-password: Mimojal263!.
+
 security:
   user:
     password: '{cipher}187743b75a20490b1ecb714c884650f6bd62d3e55cedf6b8acedf2e3551b3735'
