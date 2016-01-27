@@ -2,9 +2,4 @@ security.sessions: NEVER
 logging.level.: WARN
 server.port: 8083
 spring.redis.host: localhost
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: https://localhost:8761/eureka/
-  instance:
-    hostname: localhost
+eureka.instance.hostname: localhost
