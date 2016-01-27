@@ -29,11 +29,9 @@ spring.files:
   public.directory: D:/ArchivosFGN/public/
   pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50
-ribbon:
-  IsSecure: true
-#gateway:
-#  ribbon:
-#    listOfServers: localhost:8082
+gateway:
+  ribbon:
+    listOfServers: localhost:8082
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 12000
