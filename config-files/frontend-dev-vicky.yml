@@ -3,17 +3,6 @@ logging.level.: WARN
 server.port: 8083
 spring.redis.host: localhost
 eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 10
-    hostname: localhost
-#    securePort: ${server.port}
-#    securePortEnabled: true  
-#    nonSecurePortEnabled: false 
-#    metadataMap:
-#      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
-    region: default
-    registryFetchIntervalSeconds: 5
-    securePortEnabled: true
-#    availabilityZones: 
-#      default: ${APPLICATION_DOMAIN:${DOMAIN:defaultZone}}
+    serviceUrl:
+      defaultZone: https://localhost:8761/eureka/
