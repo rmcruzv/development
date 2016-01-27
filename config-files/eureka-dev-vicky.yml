@@ -1,49 +1,18 @@
 logging.level.: 'INFO'
-#server:
-#  port: 8761
+server:
+  port: 8761
 security:
   user:
     password: '{cipher}187743b75a20490b1ecb714c884650f6bd62d3e55cedf6b8acedf2e3551b3735'
-#eureka:
-#  instance:
-#    hostname: localhost
-#  enableSelfPreservation: false
-#  client:
-#    registerWithEureka: false
-#    fetchRegistry: false
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka/
-##      defaultZone: http://104.42.230.238:8761/eureka/
-#    server:
-#      waitTimeInMsWhenSyncEmpty: 0
-      
-server:
-  port: 8761
-  ssl:
-    enabled: true
-    key-alias: tomcat-eureka
-    key-store: "keystore-eureka.p12"
-    key-store-type: PKCS12
-    key-store-password: Mimojal263!.
-    key-password: Mimojal263!.       
 eureka:
-  enableSelfPreservation: false
   instance:
     hostname: localhost
-    securePort: ${server.port}
-    securePortEnabled: true  
-    nonSecurePortEnabled: false 
-    secureVirtualHostName: ${spring.application.name}
-    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
-    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
-    metadataMap:
-      hostname : ${eureka.instance.hostname}
-      securePort: ${server.port}       
+  enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
-#     defaultZone: https://104.42.230.238:8761/eureka/
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
+      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://104.42.230.238:8761/eureka/
+    server:
+      waitTimeInMsWhenSyncEmpty: 0

@@ -3,25 +3,14 @@ security:
 server:
   port: 8082
   context-path: /portal
-  ssl: 
-    enabled: true
-    key-alias: tomcat-gateway
-    key-store: "keystore-gateway.p12"
-    key-store-type: PKCS12
-    key-store-password: Mimojal263!.
 eureka:
-  password: 'FGN2015!.'
+  password: '123456'
   client:
     serviceUrl:
-      defaultZone: https://${eureka.instance.hostname}:8761/eureka/
-#      defaultZone: https://user:${eureka.password}@localhost:8761/eureka/
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
   instance:
-    securePort: ${server.port}
-    securePortEnabled: true
-    nonSecurePortEnabled: false 
-    preferIpAddress: true
+#    preferIpAddress: true
     hostname: localhost
-#    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
 spring.redis.host: localhost
 logging.level.: WARN
 #logging:
@@ -44,7 +33,6 @@ hystrix:
     thread.timeoutInMilliseconds: 12000
     strategy: THREAD
 ribbon:
-  IsSecure: true
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000

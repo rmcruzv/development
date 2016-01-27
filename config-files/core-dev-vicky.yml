@@ -1,13 +1,6 @@
 security.sessions: NEVER
 server:
   port: 8081
-  ssl: 
-    enabled: true
-    key-alias: tomcat-core
-    key-store: "keystore-core.p12"
-    key-store-type: PKCS12
-    key-store-password: Mimojal263!.
-    key-password: Mimojal263!.
 logging.level.: INFO
 spring:
   redis.host: localhost
@@ -25,8 +18,6 @@ spring:
     show-sql: false
 eureka:
   instance:
-    securePortEnabled: true
-    securePort: 8081    
     hostname: localhost
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
