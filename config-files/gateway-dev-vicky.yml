@@ -13,7 +13,8 @@ eureka:
   password: 'FGN2015!.'
   client:
     serviceUrl:
-      defaultZone: https://user:${eureka.password}@localhost:8761/eureka/
+      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: https://user:${eureka.password}@localhost:8761/eureka/
   instance:
     securePort: ${server.port}
     securePortEnabled: true
