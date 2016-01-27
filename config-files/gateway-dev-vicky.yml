@@ -58,7 +58,6 @@ ribbon:
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000
-  IsSecure: true
 gateway:
   ribbon:
     listOfServers: localhost:8082
