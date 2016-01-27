@@ -4,15 +4,24 @@ server:
 security:
   user:
     password: '{cipher}187743b75a20490b1ecb714c884650f6bd62d3e55cedf6b8acedf2e3551b3735'
+
 eureka:
   instance:
     hostname: localhost
+    securePort: ${server.port}
+    securePortEnabled: true  
+    nonSecurePortEnabled: false 
+    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
+    statusPageUrl: https://${eureka.instance.hostname}:${server.port}/admin/info
+    metadataMap:
+      hostname: ${eureka.instance.hostname}
+      securePort: ${server.port}
   enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://${eureka.instance.hostname}:${server.port}/eureka/
 #      defaultZone: http://104.42.230.238:8761/eureka/
     server:
       waitTimeInMsWhenSyncEmpty: 0
