@@ -3,13 +3,13 @@ security:
 server:
   port: 8082
   context-path: /portal
-  ssl:
-    enabled: true
-    key-store: keystore-susi.p12
-    key-store-password: Mimojal263!.
-    keyStoreType: PKCS12
-    keyAlias: tomcat-susi
-    key-password: Mimojal263!.
+#  ssl:
+#    enabled: true
+#    key-store: keystore-susi.p12
+#    key-store-password: Mimojal263!.
+#    keyStoreType: PKCS12
+#    keyAlias: tomcat-susi
+#    key-password: Mimojal263!.
 eureka:
   password: '123456'
   client:
@@ -61,7 +61,9 @@ ribbon:
 #  IsSecure: true
 #gateway:
 #  ribbon:
-#    listOfServers: localhost:8082
+#    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList 
+#    DeploymentContextBasedVipAddresses: gateway
+
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
