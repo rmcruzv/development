@@ -1,14 +1,7 @@
+logging.level.: INFO
 security.sessions: NEVER
 server:
   port: 8081
-#  ssl:
-#    enabled: true
-#    key-store: keystore-susi.p12
-#    key-store-password: Mimojal263!.
-#    keyStoreType: PKCS12
-#    keyAlias: tomcat-susi
-#    key-password: Mimojal263!.
-logging.level.: INFO
 spring:
   redis.host: localhost
   datasource:
@@ -21,13 +14,11 @@ spring:
       directory_provider: filesystem
       indexBase: d:/archivosFGN/lucene/indexes/
     generate-ddl: true
-    hibernate.ddl-auto: update 
+    hibernate.ddl-auto: update
     show-sql: false
 eureka:
   instance:
     hostname: localhost
-#    securePortEnabled: true
-#    securePort: ${server.port}    
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/

@@ -1,15 +1,9 @@
 logging.level.: WARN
+security.sessions: NEVER
 server:
   port: 8086
-#  ssl:
-#    enabled: true
-#    key-store: keystore-susi.p12
-#    key-store-password: Mimojal263!.
-#    keyStoreType: PKCS12
-#    keyAlias: tomcat-susi
-#    key-password: Mimojal263!.
-spring.redis.host: localhost
 spring:
+  redis.host: localhost
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: SUSI_PEF
@@ -22,19 +16,11 @@ spring:
 eureka:
   instance:
     hostname: localhost
-#    securePortEnabled: true
-#    securePort: ${server.port}
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
   pef.datasheets.directory: pef/datasheets/
 constants.max.pef_data_sheet: 50
-#gateway:
-#  ribbon:
-#    IsSecure: true
-#    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList 
-## the server must register itself with Eureka server with VipAddress "myservice"
-#    DeploymentContextBasedVipAddresses: gateway
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 12000

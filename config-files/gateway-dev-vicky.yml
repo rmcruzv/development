@@ -1,5 +1,8 @@
+logging.level.: WARN
+
 security:
   sessions: ALWAYS
+  
 server:
   port: 8082
   context-path: /portal
@@ -10,6 +13,7 @@ server:
     keyStoreType: PKCS12
     keyAlias: tomcat-susi
     key-password: Mimojal263!.
+    
 eureka:
   password: '123456'
   client:
@@ -29,13 +33,11 @@ eureka:
 #    nonSecurePortEnabled: false 
 #    homePageUrl: https://${eureka.instance.hostname}:${server.port}/
 #  client:
-#    enabled: true
 #    serviceUrl:
 #      defaultZone: https://localhost:8761/eureka/
-      
-spring.redis.host: localhost
-logging.level.: WARN
+
 spring:
+  redis.host: localhost
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: SUSI_CORE
@@ -44,25 +46,23 @@ spring:
   jpa:
     generate-ddl: true
     hibernate.ddl-auto: update
-#    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
+
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 12000
     strategy: THREAD
+
 ribbon:
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000
-#  IsSecure: true
-#gateway:
-#  ribbon:
-#    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList 
-#    DeploymentContextBasedVipAddresses: gateway
 
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
+
 zuul:
   host:
     connect-timeout-millis: 10000
