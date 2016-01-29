@@ -3,13 +3,13 @@ security:
 server:
   port: 8082
   context-path: /portal
-#  ssl:
-#    enabled: true
-#    key-store: keystore-susi.p12
-#    key-store-password: Mimojal263!.
-#    keyStoreType: PKCS12
-#    keyAlias: tomcat-susi
-#    key-password: Mimojal263!.
+  ssl:
+    enabled: true
+    key-store: keystore-susi.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-susi
+    key-password: Mimojal263!.
 eureka:
   password: '123456'
   client:
@@ -18,8 +18,8 @@ eureka:
   instance:
 #    preferIpAddress: true
     hostname: localhost
-
-
+    securePortEnabled: true
+    securePort: ${server.port}
 #eureka:
 #  instance:
 #    secureVirtualHostName: ${spring.application.name}
@@ -35,10 +35,6 @@ eureka:
       
 spring.redis.host: localhost
 logging.level.: WARN
-#logging:
-#  level:
-#    org.springframework.security: WARN
-#    org.springframework.web: WARN
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
