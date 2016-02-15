@@ -2,7 +2,6 @@ logging.level.: INFO
 security.sessions: NEVER
 server:
   port: 8081
-  context-path: /portal
 spring:
   redis.host: localhost
   datasource:
