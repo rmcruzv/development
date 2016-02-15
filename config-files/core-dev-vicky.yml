@@ -1,4 +1,4 @@
-logging.level.: INFO
+logging.level.: DEBUG
 security.sessions: NEVER
 server:
   port: 8081
