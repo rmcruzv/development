@@ -1,21 +1,31 @@
+logging.level.: WARN
+
 security:
   sessions: ALWAYS
+  
 server:
   port: 8082
   context-path: /portal
+  ssl:
+    enabled: true
+    key-store: keystore-susi.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-susi
+    key-password: Mimojal263!.
+    
 eureka:
   password: '123456'
   client:
     serviceUrl:
       defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
   instance:
-    preferIpAddress: true
-spring.redis.host: localhost
-logging:
-  level:
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
+#    preferIpAddress: true
+    hostname: localhost
+    securePortEnabled: true
+    securePort: ${server.port}
 spring:
+  redis.host: localhost
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: SUSI_CORE
@@ -24,23 +34,23 @@ spring:
   jpa:
     generate-ddl: true
     hibernate.ddl-auto: update
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
-    show-sql: true
+    show-sql: false
+#    properties.hibernate.hbm2ddl.import_files: init-data.sql
 
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 12000
     strategy: THREAD
+
 ribbon:
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000
-gateway:
-  ribbon:
-    listOfServers: localhost:8082
+
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
+
 zuul:
   host:
     connect-timeout-millis: 10000
