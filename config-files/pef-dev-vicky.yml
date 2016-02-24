@@ -1,5 +1,6 @@
 logging.level.: WARN
-security.sessions: NEVER
+security:
+  sessions: NEVER
 server:
   port: 8086
 spring:

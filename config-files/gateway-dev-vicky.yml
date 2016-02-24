@@ -1,8 +1,6 @@
 logging.level.: WARN
-
 security:
   sessions: ALWAYS
-  
 server:
   port: 8082
   context-path: /portal
@@ -13,7 +11,6 @@ server:
     keyStoreType: PKCS12
     keyAlias: tomcat-susi
     key-password: Mimojal263!.
-    
 eureka:
   password: '123456'
   client:
