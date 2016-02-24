@@ -1,22 +1,17 @@
+logging.level.: WARN
 security.sessions: NEVER
 server:
-  port: 8081
-logging.level: WARN
+  port: 8087
 spring:
   redis.host: localhost
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
-    username: SUSI_CORE
+    username: SUSI_GOODS
     password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
-    database-platform: org.hibernate.dialect.Oracle10gDialect
-    hibernate.ddl-auto: create
-    properties.hibernate.search.default:
-      directory_provider: filesystem
-      indexBase: d:/archivosFGN/lucene/indexes/
     generate-ddl: true
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
+    hibernate.ddl-auto: create
     show-sql: false
 eureka:
   instance:
@@ -24,8 +19,9 @@ eureka:
 spring.files:
   private.directory: D:/ArchivosFGN/secure/
   public.directory: D:/ArchivosFGN/public/
-  core.userPictures.directory: user-pictures/
+  feab.directory: feab/
+constants.max.feab_data_sheet: 50
 hystrix:
   command.default.execution.isolation:
-    thread.timeoutInMilliseconds: 10000
+    thread.timeoutInMilliseconds: 12000
     strategy: THREAD
