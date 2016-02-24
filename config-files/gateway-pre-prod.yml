@@ -1,7 +1,16 @@
+logging.level.: WARN
 security:
   sessions: ALWAYS
 server:
   port: 8082
+  
+  ssl:
+    enabled: true
+    key-store: classpath:keystore-susi.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-susi
+    key-password: Mimojal263!.
 eureka:
   password: '123456'
   client:
@@ -9,18 +18,15 @@ eureka:
       defaultZone: http://user:${eureka.password}@192.168.12.9:8761/eureka/
   instance:
     preferIpAddress: false
-spring.redis.host: 192.168.12.9
-logging.level.: WARN
-#logging:
-#  level:
-#    org.springframework.security: DEBUG
-#    org.springframework.web: DEBUG
+    hostname: 192.168.12.9
+    securePortEnabled: true
+    securePort: ${server.port}
 spring:
+  redis.host: 192.168.12.9
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
     generate-ddl: true
     hibernate.ddl-auto: update
-    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
 hystrix:
   command.default.execution.isolation:
@@ -30,9 +36,7 @@ ribbon:
   ConnectTimeout: 10000
   MaxAutoRetries: 1
   ReadTimeout:  12000
-gateway:
-  ribbon:
-    listOfServers: localhost:8082
+
 spring.files:
   private.directory: /home/admdevlin/ArchivosFGN/secure/
   public.directory: /home/admdevlin/ArchivosFGN/public/
@@ -45,10 +49,7 @@ zuul:
       path: /ui/**
       serviceId: frontend
     common:
-      path: /common/**
-      serviceId: core
-    security:
-      path: /security/**
+      path: /core/**
       serviceId: core
     pef:
       path: /pef/**

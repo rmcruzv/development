@@ -1,5 +1,5 @@
-security.sessions: NEVER
 logging.level.: WARN
+security.sessions: NEVER
 server:
   port: 8081
 spring:
@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@192.168.12.7:1521:xe
     username: SUSI_CORE
-    password: FGN_2015
+    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
     driverClassName: oracle.jdbc.driver.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
@@ -15,7 +15,8 @@ spring:
       directory_provider: filesystem
       indexBase: /home/admdevlin/archivosFGN/lucene/indexes/
     generate-ddl: true
-    hibernate.ddl-auto: update
+    hibernate.ddl-auto: create
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
     show-sql: false
 eureka:
   password: '123456'
