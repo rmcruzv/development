@@ -7,13 +7,13 @@ security:
 eureka:
   instance:
     hostname: 192.168.12.9
-    homePageUrl: http://192.168.12.9:${server.port}/
-    statusPageUrl: http://192.168.12.9:${server.port}/admin/info
+    homePageUrl: http://${eureka.instance.hostname}:${server.port}/
+    statusPageUrl: http://${eureka.instance.hostname}:${server.port}/admin/info
   enableSelfPreservation: false
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://192.168.12.9:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     server:
       waitTimeInMsWhenSyncEmpty: 0
