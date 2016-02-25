@@ -60,10 +60,7 @@ zuul:
       path: /ui/**
       serviceId: frontend
     common:
-      path: /common/**
-      serviceId: core
-    security:
-      path: /security/**
+      path: /core/**
       serviceId: core
     pef:
       path: /pef/**
