@@ -29,3 +29,8 @@ hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 10000
     strategy: THREAD
+ldap.contextSource:
+  url: ldap://40.118.255.23:389/DC=fiscalia,DC=test
+  base: OU=Nivel central
+  userDn: FISCALIATEST\\usuarioadpruebas
+  password: AdmAdPrueba2014
