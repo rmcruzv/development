@@ -8,7 +8,7 @@ server:
   context-path: /portal
   ssl:
     enabled: true
-    key-store: keystore-susi.p12
+    key-store: classpath:keystore-susi.p12
     key-store-password: Mimojal263!.
     keyStoreType: PKCS12
     keyAlias: tomcat-susi
