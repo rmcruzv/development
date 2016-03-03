@@ -1,0 +1,27 @@
+logging.level.: WARN
+security.sessions: NEVER
+server:
+  port: 8087
+spring:
+  redis.host: localhost
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SUSI_GOODS
+    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: create
+    show-sql: false
+eureka:
+  instance:
+    hostname: localhost
+spring.files:
+  private.directory: D:/ArchivosFGN/secure/
+  public.directory: D:/ArchivosFGN/public/
+  feab.directory: feab/
+constants.max.feab_data_sheet: 50
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 12000
+    strategy: THREAD
