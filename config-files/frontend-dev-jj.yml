@@ -1,0 +1,8 @@
+logging.level.: WARN
+security.sessions: NEVER
+server:
+  port: 8083
+spring.redis.host: localhost
+eureka:
+  instance:
+    hostname: localhost
