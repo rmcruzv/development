@@ -28,10 +28,10 @@ spring:
     username: SUSI_CORE
     password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
     driver-class-name: oracle.jdbc.driver.OracleDriver
-  jpa:
-    generate-ddl: true
-    hibernate.ddl-auto: update
-    show-sql: false
+#  jpa:
+#    generate-ddl: true
+#    hibernate.ddl-auto: update
+#    show-sql: false
 hystrix:
   command.default.execution.isolation:
     thread.timeoutInMilliseconds: 12000
