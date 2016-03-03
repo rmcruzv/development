@@ -5,7 +5,7 @@ server:
 spring:
   redis.host: localhost
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
+    url: jdbc:oracle:thin:@localhost:1521:orcl
     username: SUSI_GOODS
     password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
     driverClassName: oracle.jdbc.driver.OracleDriver
