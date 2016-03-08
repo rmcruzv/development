@@ -1,6 +1,14 @@
 logging.level.: WARN
 security:
   sessions: ALWAYS
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
 server:
   port: 8082
   context-path: /portal
@@ -63,3 +71,6 @@ zuul:
     feab:
       path: /goods/**
       serviceId: goods
+    user:
+      path: /user/**
+      url: http://localhost:9999/uaa/user
