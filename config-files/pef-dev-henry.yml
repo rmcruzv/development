@@ -1,0 +1,28 @@
+logging.level.: WARN
+security:
+  sessions: NEVER
+server:
+  port: 8086
+spring:
+  redis.host: localhost
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: SUSI_PEF
+    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    show-sql: false
+eureka:
+  instance:
+    hostname: localhost
+spring.files:
+  private.directory: D:/FGN/secure/
+  public.directory: D:/FGN/public/
+  pef.datasheets.directory: pef/datasheets/
+constants.max.pef_data_sheet: 50
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 12000
+    strategy: THREAD

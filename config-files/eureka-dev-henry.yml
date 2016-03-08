@@ -1,0 +1,19 @@
+logging.level.: 'INFO'
+server:
+  port: 8761
+security:
+  user:
+    password: '{cipher}187743b75a20490b1ecb714c884650f6bd62d3e55cedf6b8acedf2e3551b3735'
+eureka:
+  instance:
+    hostname: localhost
+    homePageUrl: http://${eureka.instance.hostname}:${server.port}/
+    statusPageUrl: http://${eureka.instance.hostname}:${server.port}/admin/info
+  enableSelfPreservation: false
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    server:
+      waitTimeInMsWhenSyncEmpty: 0

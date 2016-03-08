@@ -1,0 +1,65 @@
+logging.level.: WARN
+security:
+  sessions: ALWAYS
+server:
+  port: 8082
+  context-path: /portal
+  ssl:
+    enabled: true
+    key-store: classpath:keystore-susi.p12
+    key-store-password: Mimojal263!.
+    keyStoreType: PKCS12
+    keyAlias: tomcat-susi
+    key-password: Mimojal263!.
+eureka:
+  password: '123456'
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@localhost:8761/eureka/
+  instance:
+#    preferIpAddress: true
+    hostname: localhost
+    securePortEnabled: true
+    securePort: ${server.port}
+spring:
+  redis.host: localhost
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: SUSI_CORE
+    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+  jpa:
+    generate-ddl: false
+#    hibernate.ddl-auto: update
+#    show-sql: false
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 12000
+    strategy: THREAD
+
+ribbon:
+  ConnectTimeout: 10000
+  MaxAutoRetries: 1
+  ReadTimeout:  12000
+
+spring.files:
+  private.directory: D:/FGN/secure/
+  public.directory: D:/FGN/public/
+
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 12000
+  routes:
+    frontend:
+      path: /ui/**
+      serviceId: frontend
+    common:
+      path: /core/**
+      serviceId: core
+    pef:
+      path: /pef/**
+      serviceId: pef
+    feab:
+      path: /goods/**
+      serviceId: goods

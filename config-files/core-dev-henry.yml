@@ -1,0 +1,31 @@
+logging.level.: INFO
+security.sessions: NEVER
+server:
+  port: 8081
+spring:
+  redis.host: localhost
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: SUSI_CORE
+    password: '{cipher}77773399b5878b5eebbfac49d96f10c819cd2f592d38793c8d7044853bc7d910'
+    driverClassName: oracle.jdbc.driver.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    properties.hibernate.search.default:
+      directory_provider: filesystem
+      indexBase: D:/FGN/lucene/indexes/
+    generate-ddl: true
+    hibernate.ddl-auto: create
+    properties.hibernate.hbm2ddl.import_files: init-data.sql
+    show-sql: false
+eureka:
+  instance:
+    hostname: localhost
+spring.files:
+  private.directory: D:/FGN/secure/
+  public.directory: D:/FGN/public/
+  core.userPictures.directory: user-pictures/
+hystrix:
+  command.default.execution.isolation:
+    thread.timeoutInMilliseconds: 10000
+    strategy: THREAD
