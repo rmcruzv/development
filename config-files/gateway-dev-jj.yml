@@ -1,4 +1,4 @@
-logging.level.: WARN
+logging.level.: INFO
 security:
   sessions: ALWAYS
   oauth2:
