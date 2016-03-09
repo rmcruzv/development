@@ -30,6 +30,8 @@ eureka:
     securePortEnabled: true
     securePort: ${server.port}
 spring:
+  aop:
+    proxy-target-class: true
   redis.host: localhost
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:orcl
