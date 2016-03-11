@@ -63,9 +63,9 @@ zuul:
     feab:
       path: /goods/**
       serviceId: goods
-    user:
-      path: /user/**
-      url: http://localhost:9999/uaa/user
+#    user:
+#      path: /user/**
+#      url: http://localhost:9999/uaa/user
 
 #security:
 #  user:
